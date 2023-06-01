@@ -13,6 +13,8 @@ import {
   Scripts,
   Title,
 } from "solid-start";
+import { Router, Route } from 'solid-app-router';
+import Story from './routes/story';
 import "./root.css";
 
 export default function Root() {
@@ -41,9 +43,12 @@ export default function Root() {
                 </li>
               </ul>
             </nav>
-            <Routes>
-              <FileRoutes />
-            </Routes>
+            <Router>
+              <Routes>
+                <FileRoutes />
+                <Route path="/story/:id" component={Story} />
+              </Routes>
+            </Router>
           </ErrorBoundary>
         </Suspense>
         <Scripts />

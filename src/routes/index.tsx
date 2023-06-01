@@ -1,5 +1,6 @@
 import { createImages } from '.././helpers/images';
 import { createSignal } from 'solid-js';
+import { A } from 'solid-start';
 
 export default function Home() {
   const [prompt, setPrompt] = createSignal<string>('');
@@ -36,6 +37,9 @@ export default function Home() {
           </div>
         ))}
       </div>
+      <A class="m-3 border-2" href="/story/1">Story</A>
+      <A class="m-3 border-2" href="/story/2">Story</A>
+      <A class="m-3 border-2" href="/story/3">Story</A>
     </main>
   );
 }
