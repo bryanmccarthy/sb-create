@@ -24,8 +24,8 @@ export default function ImageGen() {
   }
 
   return (
-    <main>
-      <h1 class="text-xl m-2 font-semibold">Images</h1>
+    <main class="my-8">
+      <h1 class="text-xl m-2 font-semibold">Pictures</h1>
       <div class="flex flex-row">
         <input class="border-2 border-black rounded m-2 p-1 w-2/3" placeholder='prompt' value={prompt()} onInput={handlePromptChange} />
         <input class="border-2 border-black rounded m-2 p-1 w-12" type='number' placeholder='1' value={n()} onInput={handleNChange} />

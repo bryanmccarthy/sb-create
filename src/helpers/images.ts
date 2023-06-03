@@ -2,8 +2,10 @@ import server$ from 'solid-start/server';
 import { openai } from './config';
 
 // Create n Images by Prompt
-export const createImages = server$(async (prompt, n) => {
+export const createImages = server$(async (userPrompt: string, n: number) => {
   console.log("Creating Image");
+  const prompt = `Children's Book Style: ${userPrompt}`;
+
   const response = await openai.createImage({
     prompt: prompt,
     n: n,
